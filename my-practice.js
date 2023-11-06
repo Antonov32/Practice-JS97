@@ -163,6 +163,12 @@
 //   }
 // }
 
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
 // За допомогою циклу for знайдіть суму усіх парних чисел у проміжку від min до max включно
 
 // const max = 50;
@@ -180,6 +186,12 @@
 // }
 
 // console.log(totalPaarNumber(max, min));
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
 
 // Напишіть функцію, яка обчислить суму всіх чисел (за допомогою циклу for)
 // від 1 до 100, які діляться на 3 або на 5. І виведи в консоль рядок :
@@ -200,6 +212,12 @@
 
 // console.log(totalNumber(min, max));
 
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
 // Знайти перше ціле число, яке ділиться як на 2, так і на 3.
 
 // let firstNumber;
@@ -218,3 +236,44 @@
 
 // console.log(firstNumber);
 // console.log(secondNumber);
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getLastElementMeta(array) приймає один параметр array - масив довільних значень. Доповни код функції таким чином, щоб вона повертала новий масив з двох елементів:
+
+// перший елемент - це індекс останнього елементу у масиві array
+// другий елемент - це значення останнього елементу у масиві array
+// Оголошена функція getLastElementMeta(array)
+
+// function getLastElementMeta(array) {
+//   let indexArray = array.length - 1;
+//   let lastElement = array[array.length - 1];
+//   return [indexArray, lastElement];
+// }
+
+// console.log(getLastElementMeta(["apple", "peach", "pear", "banana"])); // повертає [3, "banana"]
+// console.log(getLastElementMeta(["apple", "peach", "pear"])); // повертає [2, "pear"]
+// // getLastElementMeta(["apple", "peach"]); // повертає [1, "peach"]
+// // getLastElementMeta(["apple"]); // повертає [0, "apple"]
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getExtremeElements(array) приймає один параметр array - масив елементів довільної довжини. Доповни код функції таким чином, щоб вона повертала масив з двох елементів - першого і останнього елементів параметра array.
+
+function getExtremeElements(array) {
+  let firstElement = array[0];
+  let lastElement = array[array.length - 1];
+  return [firstElement, lastElement];
+}
+
+console.log(getExtremeElements([1, 2, 3, 4, 5])); // повертає [1, 5]
+console.log(getExtremeElements(["Earth", "Mars", "Venus"])); // повертає ["Earth", "Venus"]
+console.log(getExtremeElements(["apple", "peach", "pear", "banana"])); // повертає ["apple", "banana"]
