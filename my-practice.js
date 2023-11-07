@@ -268,12 +268,127 @@
 
 // Функція getExtremeElements(array) приймає один параметр array - масив елементів довільної довжини. Доповни код функції таким чином, щоб вона повертала масив з двох елементів - першого і останнього елементів параметра array.
 
-function getExtremeElements(array) {
-  let firstElement = array[0];
-  let lastElement = array[array.length - 1];
-  return [firstElement, lastElement];
+// function getExtremeElements(array) {
+//   let firstElement = array[0];
+//   let lastElement = array[array.length - 1];
+//   return [firstElement, lastElement];
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5])); // повертає [1, 5]
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"])); // повертає ["Earth", "Venus"]
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"])); // повертає ["apple", "banana"]
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getSlice(array, value) приймає два параметра:
+
+// array - масив довільних елементів
+// value - значення елемента масиву для пошуку
+// Доповни код функції getSlice(array, value) так, щоб вона виконувала пошук значення value у масиві array і повертала:
+
+// порожній масив, якщо в array немає елемента зі значенням value
+// підмасив, що починається з початку array і до елемента зі значенням value включно, якщо такий елемент є в array
+
+// function getSlice(array, value) {
+//   const searchValue = array.indexOf(value);
+
+//   if (array.includes(value)) {
+//     return array.slice(0, searchValue + 1);
+//   } else {
+//     return [];
+//   }
+// }
+
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Poly")); // повертає ["Mango", "Poly"]
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Ajax")); // повертає ["Mango", "Poly", "Ajax"]
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Mango")); // повертає ["Mango"]
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Jacob")); // повертає []
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Casey")); // повертає []
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція calculateTotalPrice(order) приймає один параметр order - масив чисел. Доповни функцію так, щоб вона повертала загальну суму елементів з масиву order.
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4])); // повертає 138
+// console.log(calculateTotalPrice([164, 48, 291])); // повертає 503
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // повертає 1116
+// console.log(calculateTotalPrice([])); // з випадковим масивом повертає правильне значення
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getEvenNumbers(start, end) має два параметри start та end, які є цілими числами. Доповни код функції так, щоб вона повертала масив усіх парних чисел від start до end. Якщо жодного парного числа немає, то масив має бути пустим. Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0). Використовуй цикл for.
+
+// function getEvenNumbers(start, end) {
+//   let paarNumber = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       paarNumber.push(i);
+//     }
+//   }
+//   return paarNumber;
+// }
+
+// console.log(getEvenNumbers(2, 5)); // повертає [2, 4]
+// console.log(getEvenNumbers(3, 11)); // повертає [4, 6, 8, 10]
+// console.log(getEvenNumbers(6, 12)); // повертає [6, 8, 10, 12]
+// console.log(getEvenNumbers(8, 8)); // повертає [8]
+// console.log(getEvenNumbers(7, 7)); // повертає []
+// console.log(getEvenNumbers()); // з випадковими start і end повертає правильний масив
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Перед розв'язанням цієї задачі варто зазначити, що таке спільні елементи. Спільними елементами масивів називають ті елементи, які присутні у всіх масивах.
+
+// Наприклад, у двох масивах [1, 3, 5] і [0, 8, 5, 3] спільними будуть числа 3 і 5, оскільки вони присутні в обох вхідних масивах. А числа 0, 1 і 8 присутні тільки в одному з масивів.
+
+// Функція getCommonElements(array1, array2), приймає два масиви (array1 та array2) довільної довжини в якості параметрів.
+
+// Доповни код функції:
+
+// Створи порожній масив для зберігання нового масиву.
+// Використай цикл for для ітерації кожного елемента у array1.
+// У тілі циклу перевір, чи поточний елемент існує у array2 за допомогою методу includes.
+// Якщо він існує, то додай елемент до нового масиву.
+// Поверни наповнений масив спільних елементів як результат роботи функції.
+
+function getCommonElements(array1, array2) {
+  let newArray = [];
+  for (let i = 0; i <= array1; i += 1) {
+    if (i.includes(array2)) {
+      newArray.push(i);
+    }
+  }
+  return newArray;
 }
 
-console.log(getExtremeElements([1, 2, 3, 4, 5])); // повертає [1, 5]
-console.log(getExtremeElements(["Earth", "Mars", "Venus"])); // повертає ["Earth", "Venus"]
-console.log(getExtremeElements(["apple", "peach", "pear", "banana"])); // повертає ["apple", "banana"]
+console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
+console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
+console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
+console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
+console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
+console.log(getCommonElements()); // з випадковими двома масивами повертає правильний масив
+console.log("fvcv");
