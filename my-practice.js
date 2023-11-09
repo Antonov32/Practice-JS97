@@ -375,20 +375,58 @@
 // Якщо він існує, то додай елемент до нового масиву.
 // Поверни наповнений масив спільних елементів як результат роботи функції.
 
-function getCommonElements(array1, array2) {
-  let newArray = [];
-  for (let i = 0; i <= array1; i += 1) {
-    if (i.includes(array2)) {
-      newArray.push(i);
-    }
-  }
-  return newArray;
-}
+// function getCommonElements(array1, array2) {
+//   let newArray = [];
+//   for (let i = 0; i < array1.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       newArray.push(array1[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
+// console.log(getCommonElements()); // з випадковими двома масивами повертає правильний масив
 
-console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
-console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
-console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
-console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
-console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
-console.log(getCommonElements()); // з випадковими двома масивами повертає правильний масив
-console.log("fvcv");
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Доповни код функції calculateTotalPrice(order) так, щоб вона повертала загальну суму чисел в масиві order. Використай цикл for...of для перебору масиву.
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (const i of order) {
+//     total += i;
+//   }
+//   return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4])); // повертає 138
+// calculateTotalPrice([164, 48, 291]) // повертає 503
+// calculateTotalPrice([412, 371, 94, 63, 176]) // повертає 1116
+// calculateTotalPrice([]) // повертає 0
+// calculateTotalPrice() // з випадковим масивом чисел повертає правильну суму
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція createReversedArray() може приймати довільну кількість аргументів. Доповни код функції так, щоб вона повертала масив усіх аргументів, але в масиві вони повинні йти у зворотному порядку. Тобто, при виклику createReversedArray(1, 2, 3), функція має повернути масив [3, 2, 1]. Використовуй цикл або метод масиву toReversed(), який застосовується до масиву і результатом роботи повертає новий масив з елементами у зворотньому порядку.
+
+// function createReversedArray() {
+//   const newArray = Array.from(arguments);
+//   return newArray.toReversed();
+// }
+
+// console.log(createReversedArray(12, 85, 37, 4)); // повертає [4, 37, 85, 12]
+// console.log(createReversedArray(164, 48, 291)); // повертає [291, 48, 164]
+// console.log(createReversedArray(412, 371, 94, 63, 176)); // повертає [176, 63, 94, 371, 412]
+// console.log(createReversedArray()); // повертає []
