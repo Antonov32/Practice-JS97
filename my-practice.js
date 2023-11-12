@@ -430,3 +430,33 @@
 // console.log(createReversedArray(164, 48, 291)); // повертає [291, 48, 164]
 // console.log(createReversedArray(412, 371, 94, 63, 176)); // повертає [176, 63, 94, 371, 412]
 // console.log(createReversedArray()); // повертає []
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Перебери об'єкт apartment, використовуючи цикл for...in, і запиши в масив keys всі його ключі, а в масив values всі значення його властивостей.
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+
+// let keys = [];
+// let values = [];
+
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key]);
+// }
+
+// Оголошена змінна apartment
+// Значення змінної apartment - це об'єкт
+// Оголошена змінна keys
+// console.log(keys); // це масив ["descr", "rating", "price"]
+// Оголошена змінна values
+// console.log(values); // це масив ["Spacious apartment in the city center", 4, 2153]
+// Використано цикл for...in
