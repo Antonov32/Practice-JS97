@@ -460,3 +460,98 @@
 // Оголошена змінна values
 // console.log(values); // це масив ["Spacious apartment in the city center", 4, 2153]
 // Використано цикл for...in
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Виконай рефакторинг функції countProps(object), замінивши перебір ключів за допомогою циклу for…in на метод Object.keys() для отримання масиву властивостей. Функція має повернути кількість властивостей в об'єкті object.
+
+// function countProps(object) {
+//   let propCount = 0;
+//   let keys = Object.keys(object);
+
+//   for (const key of keys) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+//   return propCount;
+// }
+
+// console.log(countProps({})); // повертає 0
+// console.log(countProps({ name: "Mango", age: 2 })); // повертає 2
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 })); // повертає 3
+// Функція використовує метод Object.keys()
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Масив colors містить колекцію кольорів. Кожен колір представлений об'єктом і має властивості hex і rgb з відповідними для цього формату і кольору значеннями.
+
+// Перебери масив об'єктів colors, використовуючи цикл for...of. Додай у масив hexColors значення властивостей hex, а в масив rgbColors - значення властивостей rgb з усіх об'єктів масиву colors.
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const color of colors) {
+//   hexColors.push(color["hex"]);
+//   rgbColors.push(color["rgb"]);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// Оголошена змінна colors
+// Значення змінної colors - це масив
+// Оголошена змінна hexColors
+// Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
+// Оголошена змінна rgbColors
+// Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getProductPrice(productName) приймає один параметр productName - назва продукту. Функція містить масив об'єктів products з такими властивостями, як name — ім'я товару, price — ціна і quantity — кількість.
+
+// Доповни код функції так, щоб вона шукала об'єкт продукту з певним ім'ям (властивість name) в масиві products і повертала його ціну (властивість price). Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
+
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+//   const nameToSearchFor = productName;
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+// }
+
+// // Оголошена функція getProductPrice(productName).
+// console.log(getProductPrice("Radar")); // повертає 1300.
+// console.log(getProductPrice("Grip")); // повертає 1200.
+// console.log(getProductPrice("Scanner")); // повертає 2700.
+// console.log(getProductPrice("Droid")); // повертає 400.
+// console.log(getProductPrice("Engine")); // повертає null.
