@@ -663,3 +663,29 @@
 // console.log(calculateTotalPrice("Droid")); // повертає 2800
 // console.log(calculateTotalPrice("Grip")); // повертає 10800
 // console.log(calculateTotalPrice("Scanner")); // повертає 8100
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getExtremeScores(scores) приймає масив оцінок (чисел) у параметрі scores.
+
+// Доповни код функції так, щоб вона повертала об'єкт із двома властивостями:
+
+// Властивість best має містити найбільше число з масиву scores
+// Властивість worst має містити найменше число з масиву scores.
+// Використовуй оператор (...spread) і методи Math.max() і Math.min().
+
+// function getExtremeScores(scores) {
+//   const result = {
+//     best: Math.max(...scores),
+//     worst: Math.min(...scores),
+//   };
+//   return result;
+// }
+
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26])); // повертає об'єкт { best: 93, worst: 17 }
+// console.log(getExtremeScores([19, 7, 4, 17, 81, 24])); // повертає об'єкт { best: 81, worst: 4 }
+// // Для передачі аргументів методам Math.max() і Math.min() використовується синтаксис ... на масиві scores
