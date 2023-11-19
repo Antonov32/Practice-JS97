@@ -689,3 +689,179 @@
 // console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26])); // повертає об'єкт { best: 93, worst: 17 }
 // console.log(getExtremeScores([19, 7, 4, 17, 81, 24])); // повертає об'єкт { best: 81, worst: 4 }
 // // Для передачі аргументів методам Math.max() і Math.min() використовується синтаксис ... на масиві scores
+
+// const arr = [1, 2, 3];
+// const arrLength = arr.push(4, 5);
+// console.log(arrLength);
+// console.log(arr);
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Напишіть функцію, яка створює масив з вказаною довжиною і заповнює його вказанним значення.
+// Наприклад функція fillArray(3, 'a') повертає масив ['a', 'a', 'a'].
+
+// function fillArray(number, symbol) {
+//   let newArray = [];
+//   for (let i = 0; i < number; i += 1) {
+//     newArray.push(symbol);
+//   }
+//   return newArray;
+// }
+
+// console.log(fillArray(3, "abc"));
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Написати функцію, котра створить новий масив в якому
+// не буде значень, які приводяться до false
+
+// const array = [
+//   1,
+//   0,
+//   54,
+//   "doc",
+//   null,
+//   "jpg",
+//   undefined,
+//   "",
+//   "png",
+//   "exe",
+//   false,
+//   "mp4",
+//   NaN,
+//   "hbs",
+// ];
+
+// function falseArray(array) {
+//   const newArray = [];
+//   for (const element of array) {
+//     if (element) {
+//       newArray.push(element);
+//     }
+//   }
+//   return newArray;
+// }
+
+// console.log(falseArray(array));
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Напиши скрипт, який порівняє два масива і виведе у консоль результат чи усі елементи у них однакові
+
+// const arr1 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
+// const arr2 = [6, "dream", -30, 11, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
+
+// const arr3 = [4, 232, 6, -30, "color", 324, "list", 1, 11, 9, "dream", 34, 0];
+// const arr4 = ["color", 6, -30, 11, 9, 1, "dream", 324, 34, 4, 232, 0, "list"];
+
+// const arr5 = [1, 4, 6, "color", "list", 11, 9, "dream", 34, 0, -30, "lesson"];
+// const arr6 = [6, 324, "dream", -30, 9, 8, 34, "color", 4, 232, 0, "list", 11];
+
+// const arr7 = [1, 4, 6, "color", 324, 232, "list", 11, 9, "dream", 34, 0, -30];
+// const arr8 = [6, "dream", -30, 10, 9, 1, 324, 34, "color", 4, 232, 0, "list"];
+
+// function compareArray(arrey1, arrey2) {
+//   if (arrey1.length !== arrey2.length) return false;
+
+//   for (const argument of arrey1) {
+//     if (!arrey2.includes(argument)) return false;
+//   }
+//   return true;
+// }
+
+// console.log(compareArray(arr1, arr2));
+// console.log(compareArray(arr3, arr4));
+// console.log(compareArray(arr5, arr6));
+// console.log(compareArray(arr7, arr8));
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Додати метод getinfo в об'єкт user, який повертатиме інформацію
+// про користувача у форматі:
+// `Name: Peter. Surname: Parker. Age: 22. Position: spider-man.`
+
+// const user = {
+//   name: "Peter",
+//   surname: "Parker",
+//   age: 22,
+//   position: "spider-man",
+// };
+
+// user.getInfo = function () {
+//   return `Name: ${this.name}. Surname: ${this.surname}. Age:${this.age}. Position: ${this.position}.`;
+// };
+
+// console.log(user.getInfo());
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Створіть об'єкт calculator із трьома методами:
+//read(a, b) - приймає два аргументи та зберігає їх як властивості об'єкта
+//sum() - повертає суму збережених значень
+//mult() - перемножує збережені значення та повертає результат
+
+// const calculator = {
+//   read(a, b) {
+//     this.value1 = a;
+//     this.value2 = b;
+//   },
+//   sum() {
+//     return this.value1 + this.value2;
+//   },
+//   mult() {
+//     return this.value1 * this.value2;
+//   },
+// };
+
+// calculator.read(10, 2);
+
+// console.log(calculator);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Напишіть функцію updateObject, яка приймає об'єкт і ключі (ключів може бути довільна кількість)
+//які необхідно видалити з об'єкту.
+//Функція повертає новий об'єкт без зазначених параметрів.
+//Очікуваний результат ({a: 1, b: 2}, 'b') => {a: 1}
+
+// function updateObject(object, ...keys) {
+//   const copyObject = { ...object };
+//   for (const key of keys) {
+//     delete copyObject[key];
+//   }
+//   return copyObject;
+// }
+
+// console.log(updateObject({ a: 1, b: 2 }, "b"));
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
