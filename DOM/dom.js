@@ -177,3 +177,9 @@
 //   listContacts.innerHTML = "";
 //   listContacts.append(...filterItems);
 // }
+
+//*
+//
+// ---------------------------<!-- Practice Modul 7 -->-----------------------
+//
+//*
