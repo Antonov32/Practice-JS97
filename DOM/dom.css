@@ -206,7 +206,7 @@ button {
 
 /* Перевірка цільового елемента події */
 
-body {
+/* body {
   margin: 8px;
   font-family: sans-serif;
 }
@@ -237,4 +237,4 @@ body {
 
 .color-palette .item:hover {
   transform: scale(1.1);
-}
+} */
