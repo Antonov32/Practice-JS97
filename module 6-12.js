@@ -412,3 +412,128 @@
 
 // console.log(_.shuffle([1, 2, 3, 4])); // [4, 1, 3, 2]
 // console.log(_.shuffle([1, 2, 3, 4])); // [3, 2, 1, 4]
+
+//*
+//
+// ---------------------------<!-- Вебсховище -->-----------------------
+//
+//*
+
+// <--- Додавання даних --->
+
+// localStorage.setItem("ui-theme", "black");
+// console.log(localStorage);
+
+// <--- Додавання складних даних --->
+
+// const settings = {
+//   theme: "dark",
+//   isAuthenticated: true,
+//   options: [1, 2, 3],
+// };
+
+// localStorage.setItem("settings", JSON.stringify(settings));
+// console.log(localStorage);
+
+// <--- Отримання даних --->
+
+// Метод getItem(key) дозволяє зчитати зі сховища запис із ключем key і повертає його значення у JSON форматі.
+
+// const savedTheme = localStorage.getItem("ui-theme");
+// console.log(savedTheme); // "black"
+
+// Якщо у сховищі відсутній запис з таким ключем, метод повертає null.
+
+// const savedItem = localStorage.getItem("key-that-does-not-exist");
+// console.log(savedItem); // null
+
+// Якщо значення є примітивним типом, немає потреби його парсити.
+
+// В іншому випадку, якщо це масив або об'єкт, необхідно розпарсити значення методом JSON.parse(), щоб отримати валідні дані.
+
+// const settings = {
+//   theme: "dark",
+//   isAuthenticated: true,
+//   options: [1, 2, 3],
+// };
+// localStorage.setItem("settings", JSON.stringify(settings));
+
+// const savedSettings = localStorage.getItem("settings");
+// console.log(savedSettings); // A string
+
+// const parsedSettings = JSON.parse(savedSettings);
+// console.log(parsedSettings); // Settings object
+
+// У змінній savedSettings буде рядок, що представляє об'єкт, тому ми розпарсюємо це значення, і у змінній parsedSettings отримуємо повноцінний об'єкт із властивостями.
+
+// <--- Видалення даних --->
+
+// Метод removeItem(key) видаляє зі сховища існуючий запис з ключем key. В результаті своєї роботи він не повертає значення.
+
+// localStorage.setItem("ui-theme", "dark");
+// console.log(localStorage.getItem("ui-theme")); // "dark"
+
+// localStorage.removeItem("ui-theme");
+// console.log(localStorage.getItem("ui-theme")); // null
+
+// Якщо ти хочеш повністю очистити сховище, потрібно викликати метод clear().
+
+// localStorage.setItem("ui-theme", "light");
+// localStorage.setItem("notif-level", "mute");
+
+// console.log(localStorage);
+// // Storage {notif-level: 'mute', ui-theme: 'light', length: 2}
+
+// localStorage.clear();
+// console.log(localStorage); // Storage {length: 0}
+
+// Операція повного очищення сховища є ризикованою. Вона може порушити записи, створені іншими розробниками проєкту. Краще видаляти лише ті записи, які дійсно не потрібні, не покладаючись на повну очистку даних сховища.
+
+// <--- Сховище сесії --->
+
+// Єдиний виняток — звертаємося до них через об'єкт sessionStorage, а не localStorage.
+
+// console.log(window.sessionStorage); // Storage {length: 0}
+
+// Методом setItem(key, value) можна записувати як рядки, так і складні типи даних.
+
+// sessionStorage.setItem("user-id", "123");
+// sessionStorage.setItem(
+//   "tickets",
+//   JSON.stringify({ from: "Lviv", to: "Kyiv", quantity: 2 })
+// );
+// console.log(sessionStorage);
+// // Storage {user-id: '123', tickets: '{"from":"Lviv","to":"Kyiv","quantity":2}', length: 2}
+
+// Методом getItem(key) можна читати записи, використовуючи збережений ключ.
+
+// const userId = sessionStorage.getItem("user-id");
+// console.log(userId); // "123"
+
+// const tickets = JSON.parse(sessionStorage.getItem("tickets"));
+// console.log(tickets); // { from: "Lviv", to: "Kyiv", quantity: 2 }
+
+// І звісно, видаляти елементи за ключем і очищати сховище цілком методами removeItem(key) і clear() відповідно.
+
+// sessionStorage.removeItem("tickets");
+// console.log(sessionStorage); // Storage {user-id: '123', length: 1}
+
+// sessionStorage.clear();
+// console.log(sessionStorage); // Storage {length: 0}
+
+// <--- Кейс: Форма з повідомленням --->
+
+// const form = document.querySelector(".feedback-form");
+// const localStorageKey = "goit-example-message";
+
+// form.elements.message.value = localStorage.getItem(localStorageKey) ?? "";
+
+// form.addEventListener("input", (evt) => {
+//   localStorage.setItem(localStorageKey, evt.target.value);
+// });
+
+// form.addEventListener("submit", (evt) => {
+//   evt.preventDefault();
+//   localStorage.removeItem(localStorageKey);
+//   form.reset();
+// });
